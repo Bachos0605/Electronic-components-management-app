@@ -1,0 +1,540 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C533E51C-E8E3-4E26-B9C1-D92A7178B1BB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>shoppingManagement</RootNamespace>
+    <AssemblyName>shoppingManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine">
+      <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource">
+      <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared">
+      <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms">
+      <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="FlatButton">
+      <HintPath>D:\Downloads\JControls\FlatButton.dll</HintPath>
+    </Reference>
+    <Reference Include="JMaterialTextbox">
+      <HintPath>D:\Downloads\JControls\JMaterialTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="JMetroTextBox">
+      <HintPath>D:\Downloads\JControls\JMetroTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="JTextBox">
+      <HintPath>D:\Downloads\JControls\JTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="JTextBox2">
+      <HintPath>D:\Downloads\JControls\JTextBox2.dll</HintPath>
+    </Reference>
+    <Reference Include="JThinButton">
+      <HintPath>D:\Downloads\JControls\JThinButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.24160419\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin_Dichvu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Dichvu.Designer.cs">
+      <DependentUpon>Admin_Dichvu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_DV_Dsphieudv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_DV_Dsphieudv.Designer.cs">
+      <DependentUpon>Admin_DV_Dsphieudv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Hoadon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Hoadon.Designer.cs">
+      <DependentUpon>Admin_Hoadon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Khachhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Khachhang.Designer.cs">
+      <DependentUpon>Admin_Khachhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Khuyenmai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Khuyenmai.Designer.cs">
+      <DependentUpon>Admin_Khuyenmai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Nhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Nhanvien.Designer.cs">
+      <DependentUpon>Admin_Nhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Nhaphang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Nhaphang.Designer.cs">
+      <DependentUpon>Admin_Nhaphang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Phieudichvu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Phieudichvu.Designer.cs">
+      <DependentUpon>Admin_Phieudichvu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Tonkho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Tonkho.Designer.cs">
+      <DependentUpon>Admin_Tonkho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Topsanpham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Topsanpham.Designer.cs">
+      <DependentUpon>Admin_Topsanpham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bangtonkho.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bangtonkho.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="baocaodoanhthu.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>baocaodoanhthu.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Button_WOC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Admin_Thongkedoanhthu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Thongkedoanhthu.Designer.cs">
+      <DependentUpon>Admin_Thongkedoanhthu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="danhsachphieudv.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>danhsachphieudv.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="demo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>demo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="hoadon.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hoadon.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NV_1Khachhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NV_1Khachhang.Designer.cs">
+      <DependentUpon>NV_1Khachhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV_2Mahoadon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NV_2Mahoadon.Designer.cs">
+      <DependentUpon>NV_2Mahoadon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV_3_1Taohoadon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NV_3_1Taohoadon.Designer.cs">
+      <DependentUpon>NV_3_1Taohoadon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV_4Khachhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NV_4Khachhang.Designer.cs">
+      <DependentUpon>NV_4Khachhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV_5Maphieudichvu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NV_5Maphieudichvu.Designer.cs">
+      <DependentUpon>NV_5Maphieudichvu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV_6Dichvu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NV_6Dichvu.Designer.cs">
+      <DependentUpon>NV_6Dichvu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV_6_1Taophieudv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NV_6_1Taophieudv.Designer.cs">
+      <DependentUpon>NV_6_1Taophieudv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV_8Maphieunhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NV_8Maphieunhap.Designer.cs">
+      <DependentUpon>NV_8Maphieunhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV_9Phieunhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NV_9Phieunhap.Designer.cs">
+      <DependentUpon>NV_9Phieunhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV_9_1Taophieunhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NV_9_1Taophieunhap.Designer.cs">
+      <DependentUpon>NV_9_1Taophieunhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NV_Menu.Designer.cs">
+      <DependentUpon>NV_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV_3Sanpham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NV_3Sanpham.Designer.cs">
+      <DependentUpon>NV_3Sanpham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="phieudv.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phieudv.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="phieunh.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phieunh.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Re_hoadon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Re_hoadon.Designer.cs">
+      <DependentUpon>Re_hoadon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_Admin.Designer.cs">
+      <DependentUpon>Login_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_NV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_NV.Designer.cs">
+      <DependentUpon>Login_NV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Menu.Designer.cs">
+      <DependentUpon>Admin_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Sanpham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Sanpham.Designer.cs">
+      <DependentUpon>Admin_Sanpham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="topsanpham.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>topsanpham.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Admin_Dichvu.resx">
+      <DependentUpon>Admin_Dichvu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_DV_Dsphieudv.resx">
+      <DependentUpon>Admin_DV_Dsphieudv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Hoadon.resx">
+      <DependentUpon>Admin_Hoadon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Khachhang.resx">
+      <DependentUpon>Admin_Khachhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Khuyenmai.resx">
+      <DependentUpon>Admin_Khuyenmai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Nhanvien.resx">
+      <DependentUpon>Admin_Nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Nhaphang.resx">
+      <DependentUpon>Admin_Nhaphang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Phieudichvu.resx">
+      <DependentUpon>Admin_Phieudichvu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Tonkho.resx">
+      <DependentUpon>Admin_Tonkho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Topsanpham.resx">
+      <DependentUpon>Admin_Topsanpham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Thongkedoanhthu.resx">
+      <DependentUpon>Admin_Thongkedoanhthu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bangtonkho.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>bangtonkho.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baocaodoanhthu.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>baocaodoanhthu.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="danhsachphieudv.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>danhsachphieudv.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="demo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>demo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hoadon.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>hoadon.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV_1Khachhang.resx">
+      <DependentUpon>NV_1Khachhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV_2Mahoadon.resx">
+      <DependentUpon>NV_2Mahoadon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV_3_1Taohoadon.resx">
+      <DependentUpon>NV_3_1Taohoadon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV_4Khachhang.resx">
+      <DependentUpon>NV_4Khachhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV_5Maphieudichvu.resx">
+      <DependentUpon>NV_5Maphieudichvu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV_6Dichvu.resx">
+      <DependentUpon>NV_6Dichvu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV_6_1Taophieudv.resx">
+      <DependentUpon>NV_6_1Taophieudv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV_8Maphieunhap.resx">
+      <DependentUpon>NV_8Maphieunhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV_9Phieunhap.resx">
+      <DependentUpon>NV_9Phieunhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV_9_1Taophieunhap.resx">
+      <DependentUpon>NV_9_1Taophieunhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV_Menu.resx">
+      <DependentUpon>NV_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV_3Sanpham.resx">
+      <DependentUpon>NV_3Sanpham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="phieudv.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>phieudv.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="phieunh.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>phieunh.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Re_hoadon.resx">
+      <DependentUpon>Re_hoadon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Admin.resx">
+      <DependentUpon>Login_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_NV.resx">
+      <DependentUpon>Login_NV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Menu.resx">
+      <DependentUpon>Admin_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Sanpham.resx">
+      <DependentUpon>Admin_Sanpham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="topsanpham.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>topsanpham.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accept-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-go-home-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll" />
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
