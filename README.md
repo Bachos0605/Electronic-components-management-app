@@ -1,1 +1,0 @@
-# Electronic-components-management-app
