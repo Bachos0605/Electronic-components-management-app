@@ -20,7 +20,7 @@ Technology used for the Electronic components management app:
 ### Responsibility
 
 - Build database for app and handle trigger, store procedure.
-- Handle transaction: Lost Update, Unrepeatable, Dirty Read, Phantom Read, Deadlock.
+- Handle transaction: Lost Update, Unrepeatable Read, Dirty Read, Phantom Read, Deadlock.
 - Build model and controller of User for login, logout, order, sell the product.
 - Build model and controller of Employee for management system.
 
