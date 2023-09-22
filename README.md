@@ -5,7 +5,7 @@
   - [Technology](#technology)
   - [Responsibility](#responsibility)
   - [Screenshot](#screenshot)
-  - [More information](#moreinformation)
+  - [More information](#more information)
 ### Overview
 
 Build Electronic components management app to manage and perform some transaction simultaneously in Oracle.
